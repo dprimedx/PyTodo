@@ -26,3 +26,12 @@ class TaskList:
 			for x in self.items:
 				if x.id == id:
 					return x
+
+	def remove(self, id=-1):
+		if id > -1:
+			self.items.remove(self.getByID(id))
+class Task:
+	def __init__(self, id, desc, priority=0):
+		self.id = id
+		self.desc = desc
+		self.priority = priority
